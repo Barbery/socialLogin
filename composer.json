@@ -1,5 +1,5 @@
 {
-    "name": "barbery/socialLogin",
+    "name": "barbery/social-login",
     "type": "library",
     "description": "social login library, include weibo, qq",
     "keywords": ["登录","第三方登录","社区登录"],
