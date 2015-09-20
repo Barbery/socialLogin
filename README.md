@@ -179,4 +179,9 @@ public function **getFullUserInfo**()
 
 public function **getLastError**()  
 获取返回的最后的一个错误信息
-
+```php
+array(
+    'code' => '第三方登陆服务商返回错误码',//如果没有错误码则为 -1
+    'msg' => '第三方登陆服务商返回的错误msg'
+);
+```
