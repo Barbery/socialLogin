@@ -2,7 +2,7 @@
     "name": "barbery/social-login",
     "type": "library",
     "description": "social login library, include weibo, qq",
-    "keywords": ["登录","第三方登录","社区登录"],
+    "keywords": ["登录","第三方登录","社区登录","social login", "third part login"],
     "homepage": "https://github.com/Barbery/socialLogin",
     "license": "MIT",
     "authors": [
