@@ -123,7 +123,7 @@ class User extend Controllers
         //应用信息
         'key' => '11111111111',
         'secret' => 'xxxxxxxxxxxxxxx',
-        // 授权返回地址，注意：这里需要跳回到统一的第三方处理action
+        // 授权返回地址，注意：这里需要跳回到统一的第三方处理action, 其中type参数要和服务商对应不可缺失
         'redirectUrl' => '/user/socialLogin?type=weibo',
         // 授权内容
         'scope' => 'email'
