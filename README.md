@@ -156,16 +156,15 @@ class User extend Controllers
 private function **getInstance**()  
 获取sdk对象
 
-public function **authAndGetUserInfo**()
+public function **authAndGetUserInfo**()  
 引导用户授权且获取用户信息
 
-public function **getAuthorizeURL**()
+public function **getAuthorizeURL**()  
 获取第三方授权地址
 
-
-public function **getFullUserInfo**()
+public function **getFullUserInfo**()  
 获取全部返回的用户信息
 
-public function **getLastError**()
+public function **getLastError**()  
 获取返回的最后的一个错误信息
 
