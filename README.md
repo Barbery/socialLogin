@@ -157,8 +157,20 @@ private function **getInstance**()
 获取sdk对象
 
 public function **authAndGetUserInfo**()  
-引导用户授权且获取用户信息
-
+引导用户授权且获取用户信息，该方法统一返回一个userInfo数据结构
+```php
+<?php
+$userInfo = array(
+    'nickname'      => '第三方昵称',
+    'face'          => '第三方头像url，优先拿大图',
+    'gender'        => '性别',//1为男，2为女，0为未设置或未知
+    'openid'        => '第三方唯一身份标识id',
+    'access_token'  => '授权access_token',
+    'timeout'       => 'access_token过期时间戳',
+    'refresh_token' => 'refresh_token','如果有则返回，无则为空字符串',
+    'from'          => '第三方来源标识'//google,github,weibo,qq...etc.
+);
+```
 public function **getAuthorizeURL**()  
 获取第三方授权地址
 
