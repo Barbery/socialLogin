@@ -25,7 +25,7 @@ class Base
     protected $openId;
     protected $from;
     protected $userInfo;
-    protected $lastError;
+    protected $lastError = array('code' => 0, 'msg' => '');
     // 是否启用代理
     protected $enableProxy = false;
     protected $proxy = array();

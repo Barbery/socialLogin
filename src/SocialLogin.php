@@ -23,17 +23,13 @@ class SocialLogin
 
     public function __construct(array $config = array(), $type = '')
     {
-        if ((empty($type) && empty($_GET['type'])) || empty($config)) {
-            throw new Exception('参数有误', -1);
-        }
-
         $this->type    = strtolower(empty($type) ? $_GET['type'] : $type);
         $this->configs = $config;
         $sessionId = session_id();
         if (empty($sessionId)) {
             session_start();
         }
-        $this->getInstance();
+        
     }
 
 
@@ -63,6 +59,7 @@ class SocialLogin
 
     public function authAndGetUserInfo()
     {
+        $this->getInstance();
         if (empty($_GET['code'])) {
             return $this->redirectToAuth();
         }
@@ -84,6 +81,9 @@ class SocialLogin
 
     public function getFullUserInfo()
     {
+        if (empty($this->obj)) {
+            return array();
+        }
         return $this->obj->getFullUserInfo();
     }
 
@@ -92,6 +92,13 @@ class SocialLogin
 
     public function getLastError()
     {
+        if (empty($this->obj)) {
+            return array(
+                'code' => 0,
+                'msg'  => ''
+            );
+        }
+
         return $this->obj->getLastError();
     }
 
