@@ -44,6 +44,10 @@ class SocialLogin
             throw new Exception('暂时不支持该登陆方式', -1);
         }
 
+        if (empty($this->configs[$this->type])) {
+            throw new Exception('配置信息有误', -1);
+        }
+
         $class = "Barbery\\SocialLogin\\Sdks\\adapter\\{$this->classMap[$this->type]}";
         $this->obj = new $class($this->configs[$this->type]);
 
