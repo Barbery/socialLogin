@@ -137,13 +137,17 @@ class Base
 
 
 
-    protected function httpGet($url)
+    protected function httpGet($url, array $headers = array())
     {
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_USERAGENT, 'from barbery\'s sociallogin sdk');
         if ($this->enableProxy) {
             $this->_setProxy($ch);
+        }
+
+        if ( ! empty($headers)) {
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         }
 
         $result = curl_exec($ch);

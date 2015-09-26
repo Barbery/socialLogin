@@ -106,7 +106,7 @@ class User extend Controllers
 
 # 配置说明 | Config
 
-目前支持的第三方登陆有：Github，Google，QQ，Weibo，后续会不断增加，支持的列表可以从[这里](https://github.com/Barbery/socialLogin/tree/master/src/sdks/adapter)看到。
+目前支持的第三方登陆有：Github，Google，QQ，Weibo，Douban，后续会不断增加，支持的列表可以从[这里](https://github.com/Barbery/socialLogin/tree/master/src/sdks/adapter)看到。
 
 配置demo:
 ```php

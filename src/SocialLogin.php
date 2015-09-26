@@ -16,6 +16,7 @@ class SocialLogin
         'weibo'  => 'Weibo',
         'google' => 'Google',
         'github' => 'Github',
+        'douban' => 'Douban',
     );
     private $obj = null;
 
